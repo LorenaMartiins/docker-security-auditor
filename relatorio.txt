@@ -1,0 +1,29 @@
+RELATÓRIO DE AUDITORIA DE SEGURANÇA - DOCKERFILE
+============================================================
+
+[R1] Usuário não-root definido — PASS
+   Container configurado para rodar como usuário 'algumnome'.
+
+[R2] Imagem base com versão fixa — PASS
+   Todas as imagens base usam tags de versão específicas.
+
+[R3] Uso seguro de ADD/COPY — PASS
+   Nenhum uso arriscado de ADD encontrado.
+
+[R4] Sem exposição de portas sensíveis — PASS
+   Nenhuma porta sensível exposta explicitamente.
+
+[R5] Sem segredos hardcoded — PASS
+   Nenhum segredo hardcoded encontrado nas instruções ENV/ARG.
+
+[R6] HEALTHCHECK configurado — PASS
+   Instrução HEALTHCHECK presente.
+
+[R7] Builds reprodutíveis (sem upgrade genérico) — PASS
+   Nenhum 'apt-get upgrade' genérico encontrado.
+
+[R8] Limpeza de cache de pacotes — PASS
+   Cache de pacotes limpo corretamente ou não aplicável.
+
+------------------------------------------------------------
+SCORE FINAL: 8/8 regras aprovadas (100.0%)
